@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import *
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 
 class IndexView(ListView):
@@ -22,3 +22,9 @@ class FilteredProduktView(ProduktView):
 
     def get_queryset(self):
         return Produkt.objects.filter(druh_id=self.kwargs['id'])
+
+
+class ProduktDetailView(DetailView):
+    model = Produkt
+    context_object_name = 'produkt'
+    template_name = 'detail.html'

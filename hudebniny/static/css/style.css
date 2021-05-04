@@ -1,13 +1,41 @@
 .cropped {
-    width: 100%; /* width of container */
-    max-height: 10rem; /* height of container */
     overflow: hidden;
     opacity: 1;
 	-webkit-transition: 0.7s ease-in-out;
 	transition: 0.7s ease-in-out;
+    -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear;
 }
 
 .cropped:hover {
     opacity: .5;
     max-height: 100%;
+}
+
+.disabled:hover {
+    text-decoration: none;
+}
+
+.kategorie {
+    height: 10rem;
+}
+
+.produkt-detail {
+    width: 80%;
+    height: auto;
+}
+
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 1rem;
+}
+
+main {
+    margin-bottom: 100px;
 }

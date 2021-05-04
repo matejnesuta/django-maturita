@@ -22,7 +22,7 @@ from django_maturita import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hudebniny/', include('hudebniny.urls')),
+    path('hudebniny/', include('hudebniny.urls'), name="home"),
     path('', RedirectView.as_view(url='hudebniny/')),
 ]
 

@@ -1,9 +1,7 @@
-/*$(document).ready(function() {
-    $(".cropped").mouseover(function(){
-        $(this).css("max-height", "100%")
-    });
-    $(".cropped").mouseleave(function(){
-        $(".cropped").css("max-height", "10rem")
-    });
+$(document).ready(function() {
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
 
-});*/
+});

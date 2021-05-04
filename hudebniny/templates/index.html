@@ -10,8 +10,8 @@
         {% for druh in druh_list %}
             <div class="col-md-6 col-lg-4" >
                 <div class="card">
-                    <figure class="cropped">
-                        <img class="card-img-top" src="{{ druh.foto.url }}" alt="Card image cap">
+                    <figure class="cropped kategorie">
+                        <img class="card-img-top img-fluid" src="{{ druh.foto.url }}" alt="Card image cap">
                     </figure>
                     <div class="card-body">
                         <h5 class="card-title">{{ druh.nazev }}</h5>
@@ -22,7 +22,7 @@
         {% endfor %}
         </div>
     <div class="text-center">
-        <button href="{% url 'produkty'%}" type="button" id="produkty" class="btn btn-primary">Přejít na všechny produkty</button>
+        <a href="{% url 'produkty'%}" class="btn btn-primary">Go somewhere</a>
     </div>
     </div>
 {% endblock %}

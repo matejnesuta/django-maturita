@@ -9,13 +9,15 @@
         {% for produkt in produkt_list %}
             <div class="col-md-6 col-lg-4" >
                 <div class="card produkt">
-                    <figure class="cropped">
-                        <img class="card-img-top" src="{{ produkt.foto.url }}" >
-                    </figure>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ produkt.nazev }}</h5>
-                        <p>{{ produkt.cena }}</p>
-                    </div>
+                    <a href="{% url 'detail' produkt.pk %}">
+                        <figure class="cropped">
+                            <img class="card-img-top" src="{{ produkt.foto.url }}" >
+                        </figure>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ produkt.nazev }}</h5>
+                            <p>{{ produkt.cena }} KČ</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         {% endfor %}
