@@ -36,6 +36,7 @@ class Vyrobce(models.Model):
 
 class Druh(models.Model):
     nazev = models.CharField(blank=False, max_length=100, null=False, unique=True, verbose_name="Název")
+    foto = models.ImageField(upload_to='druh/', blank=True, null=True, verbose_name="Ilustrační foto")
 
     class Meta:
         verbose_name = "Druh zboží"
