@@ -9,7 +9,7 @@ class Produkt(models.Model):
     cena = models.DecimalField(blank=False, decimal_places=2, default=999.99, max_digits=12, null=False,
                                validators=[MinValueValidator(0.0)], verbose_name="Cena")
     vyrobce = models.ForeignKey('Vyrobce', null=False, on_delete=models.RESTRICT)
-    popis = models.TextField
+    popis = models.TextField(blank=False, null=False, verbose_name="Popis")
     foto = models.ImageField(upload_to='produkt/%Y/%m/%d/', blank=True, null=True, verbose_name="Fotka produktu")
     druh = models.ForeignKey('Druh', null=False, on_delete=models.RESTRICT)
 
