@@ -1,3 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,500;1,400;1,500');
+
+body {
+    font-family: 'Fira Sans Condensed';
+    min-height: 100%;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+footer {
+    position: relative;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 1rem;
+}
+
+.card{
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.nadpis {
+    border: 2px solid!important;
+    width: 6%!important;
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 3rem!important;
+  }
+  h2{
+    font-size: 2rem!important;
+  }
+}
+
+li {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+hr {
+    width: 3%;
+    border: 1px solid;
+}
+
+
+h2 {
+    font-size: 3.0rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
 .cropped {
     overflow: hidden;
     opacity: 1;
@@ -20,22 +79,21 @@
     height: 10rem;
 }
 
-.produkt-detail {
-    width: 80%;
-    height: auto;
+
+.cara {
+    border-bottom: 1px solid #dee2e6;
 }
 
-footer {
-    position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
+.border {
+    border-radius: 1rem;
 }
 
-footer p {
-    margin: 1rem;
+.produkty-tlacitko {
+     width: 50%;
 }
 
-main {
-    margin-bottom: 100px;
+@media (max-width: 800px) {
+  .produkty-tlacitko {
+    width: auto!important;
+  }
 }

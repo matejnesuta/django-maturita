@@ -4,25 +4,28 @@
 
 {% block content %}
     <h2 class="text-center">Úvodní stránka</h2>
-    <div class="container">
-    <h3 class="text-center">Kategorie</h3>
+    <div class="container border">
+    <h3 class="text-center mt-5">Kategorie</h3>
+        <hr>
         <div class="row">
         {% for druh in druh_list %}
-            <div class="col-md-6 col-lg-4" >
+            <div class="col-md-6 col-lg-4 {% if forloop.last%}{% else %}cara{% endif %}">
                 <div class="card">
                     <figure class="cropped kategorie">
-                        <img class="card-img-top img-fluid" src="{{ druh.foto.url }}" alt="Card image cap">
+                        <a href="{% url 'produkty' druh.pk %}">
+                            <img class="card-img-top img-fluid" src="{{ druh.foto.url }}" alt="Card image cap">
+                        </a>
                     </figure>
                     <div class="card-body">
                         <h5 class="card-title">{{ druh.nazev }}</h5>
-                         <a href="{% url 'produkty' druh.pk %}" class="btn btn-primary">Go somewhere</a>
+                         <a href="{% url 'produkty' druh.pk %}" class="btn btn-dark">Klikni</a>
                     </div>
                 </div>
             </div>
         {% endfor %}
         </div>
-    <div class="text-center">
-        <a href="{% url 'produkty'%}" class="btn btn-primary">Go somewhere</a>
     </div>
+    <div class="text-center">
+        <a href="{% url 'produkty'%}" class="btn border p-5 m-5 produkty-tlacitko">Chci přejít na všechny produkty</a>
     </div>
 {% endblock %}
